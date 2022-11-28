@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-title>Sort by salary</mat-card-title>
+  <mat-card-content>
+    <mat-selection-list role="list" fxLayout="row" [multiple]="false">
+      <mat-list-option role="listoption" *ngFor="let item of sorts | async" [selected]="item === 'asc'" [value]="item" (click)="sortSalary(item)">
+        {{item}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Filter by age</mat-card-title>
+  <mat-card-content>
+    <mat-selection-list role="list" fxLayout="row" [multiple]="false">
+      <mat-list-option role="listitem" *ngFor="let item of filters | async" [selected]="item.name === 'All'" [value]="item.name" (click)="filterAge(item)">
+        {{item.name}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Employee list</mat-card-title>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of employees$ | async">
+        ID: {{item.id}},
+        Name: {{item.employee_name}},
+        Salary: {{item.employee_salary}},
+        Age: {{item.employee_age}}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

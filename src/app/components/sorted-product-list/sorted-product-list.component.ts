@@ -26,7 +26,7 @@ export class SortedProductListComponent {
     })
   )
   public orders: Observable<string[]> = of(['asc', 'desc']);
-  constructor(private _productService: ProductService) {
+    constructor(private _productService: ProductService) {
   }
 
   sort(order: string): void {
