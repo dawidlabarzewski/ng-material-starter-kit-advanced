@@ -10,14 +10,14 @@ import {SortedProductListComponent} from "./components/sorted-product-list/sorte
 import {SortedProductListComponentModule} from "./components/sorted-product-list/sorted-product-list.component-module";
 
 const routes = [
-  {
-    path: 'products/:category',
-    component: FilteredProductListComponent
-  }
   // {
-  //   path: 'products',
+  //   path: 'products/:category',
   //   component: FilteredProductListComponent
   // }
+  {
+    path: 'products',
+    component: FilteredProductListComponent
+  }
   // {
   //   path: 'products',
   //   component: SortedProductListComponent
