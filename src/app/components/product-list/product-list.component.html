@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title></mat-card-title>
+  <mat-card-content>
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let item of refreshedList$ | async">
+      {{item.title}}
+      {{item.price}}
+      <button mat-raised-button color="primary" (click)="remove(item.id)">Delete</button>
+    </mat-list-item>
+  </mat-list>
+  </mat-card-content>
+</mat-card>
