@@ -17,6 +17,6 @@ export class EmployeeService {
   }
 
   delete(id: string): Observable<EmployeeModel> {
-    return this._httpClient.delete<EmployeeModel>(`https://dummy.restapiexample.com/api/v1/employees/${id}`);
+    return this._httpClient.delete<EmployeeModel>(`https://dummy.restapiexample.com/api/v1/delete/${id}`);
   }
 }
